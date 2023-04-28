@@ -1,6 +1,6 @@
-# OpenGPT
+# OpenGPT (3.5/4)
 
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsEfLSZIbASnlS4lwxcCMytQISQOhgYlgdug&usqp=CAU)
+![icon](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsEfLSZIbASnlS4lwxcCMytQISQOhgYlgdug&usqp=CAU)
 
 OpenGPT 3.5/4 is a project aimed at providing practical and user-friendly APIs. The APIs allow for easy integration with various applications, making it simple for developers to incorporate the natural language processing capabilities of GPT into their projects. The user-friendly design of the APIs ensures that developers can quickly and easily start using the GPT technology, without having to navigate complex systems. OpenGPT 3.5/4 is the ideal solution for developers looking to enhance their applications with advanced natural language processing capabilities.
 
@@ -9,6 +9,8 @@ OpenGPT 3.5/4 is a project aimed at providing practical and user-friendly APIs. 
 This project was made so that everyone can have access to artificial intelligence models for free. Non-profit made by those who love to program!
 
 ## Explaining some details
+
+- We are currently organizing the project and as such, the source code for one of the AIs API has not been released yet.
 
 - The artificial intelligence models used and APIs are not ours, it is being made clear so that it does not create confusion in the future.
 
@@ -19,9 +21,9 @@ This project was made so that everyone can have access to artificial intelligenc
 ## Artifical Intelligences
 > remembering that all these models are from their respective companies, none of them are ours.
 
-------------------------------
+
 | Included | Website | Model |
 |----------|---------|-------|
-|    ✅    |  [YouChat (Better)](https://you.com/) |  `GPT 3.5` + **Internet**  |
-|    ❎    |  [ChatSonic](https://writesonic.com)  |  `GPT 3.5` + **Internet**  |
-|    ❎    |  [Beta.Character.AI](https://beta.character.ai) |  `(CNNs)(GANs)`  |
+| `✔️` |  [`You.com`](https://you.com/) |  `GPT 3.5` + **Internet**  |
+| `❌` |  [`WriteSonic`](https://writesonic.com)  |  `GPT 3.5` + **Internet**  |
+| `❌` |  [`Beta.Character.AI`](https://beta.character.ai) |  `(CNNs)(GANs)`  |
