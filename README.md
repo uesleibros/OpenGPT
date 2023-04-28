@@ -16,4 +16,9 @@ This project was made so that everyone can have access to artificial intelligenc
 
 - Our purpose is not to harm any of these companies or leak content, we are just providing alternative uses so you can have fun.
 
-- 
+## Artifical Intelligences
+> remembering that all these models are from their respective companies, none of them are ours.
+
+-----------------------
+
+
