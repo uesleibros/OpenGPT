@@ -22,10 +22,6 @@ This project was made so that everyone can have access to artificial intelligenc
 ------------------------------
 | Included | Website | Model |
 |----------|---------|-------|
-
-
-
-
-|    ✅    | [YouChat (Better)](https://you.com/) |  `GPT 3.5` + **Internet**  |
-|----------|--------------------------------------|----------------------------|
-|    ❎    |  [ChatSonic](https://writesonic.com) |  `GPT 3.5` + **Internet**  |
+|    ✅    |  [YouChat (Better)](https://you.com/) |  `GPT 3.5` + **Internet**  |
+|    ❎    |  [ChatSonic](https://writesonic.com)  |  `GPT 3.5` + **Internet**  |
+|    ❎    |  [Beta.Character.AI](https://beta.character.ai) |  `(CNNs)(GANs)`  |
