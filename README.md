@@ -19,11 +19,13 @@ This project was made so that everyone can have access to artificial intelligenc
 - Our purpose is not to harm any of these companies or leak content, we are just providing alternative uses so you can have fun.
 
 ## Artifical Intelligences
+
 > remembering that all these models are from their respective companies, none of them are ours.
 
+## Contribution
 
-| Included | Website | Model |
-|----------|---------|-------|
-| `✔️` |  [`You.com`](https://you.com/) |  `GPT 3.5` + **Internet**  |
-| `❌` |  [`WriteSonic`](https://writesonic.com)  |  `GPT 3.5` + **Internet**  |
-| `❌` |  [`Beta.Character.AI`](https://beta.character.ai) |  `(CNNs)(GANs)`  |
+APIs play a crucial role in the development and implementation of AI systems. They provide a means of communication between different components of the AI system, as well as between the AI system and external applications. APIs can also facilitate the integration of AI systems into larger software systems.
+
+At this stage, we welcome any contributions to our project, including pull requests.
+
+By leveraging the power of APIs and collaborating with a diverse group of developers, we can push the boundaries of what is possible with AI technology. So if you're interested in contributing to our project, please don't hesitate to get in touch! [Contribute.](https://github.com/uesleibros/OpenGPT/contributions)
