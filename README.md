@@ -28,4 +28,4 @@ APIs play a crucial role in the development and implementation of AI systems. Th
 
 At this stage, we welcome any contributions to our project, including pull requests.
 
-By leveraging the power of APIs and collaborating with a diverse group of developers, we can push the boundaries of what is possible with AI technology. So if you're interested in contributing to our project, please don't hesitate to get in touch! [Contribute.](https://github.com/uesleibros/OpenGPT/contributions)
+By leveraging the power of APIs and collaborating with a diverse group of developers, we can push the boundaries of what is possible with AI technology. So if you're interested in contributing to our project, please don't hesitate to get in touch! [Contribute.](https://github.com/uesleibros/OpenGPT/pulls)
