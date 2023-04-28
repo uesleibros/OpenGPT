@@ -27,5 +27,5 @@ This project was made so that everyone can have access to artificial intelligenc
 
 
 |    ✅    | [YouChat (Better)](https://you.com/) |  `GPT 3.5` + **Internet**  |
-|----------|-------------|
-|    ❎    | [ChatSonic](https://writesonic.com) | `GPT 3.5` + **Internet**
+|----------|--------------------------------------|----------------------------|
+|    ❎    |  [ChatSonic](https://writesonic.com) |  `GPT 3.5` + **Internet**  |
