@@ -7,3 +7,13 @@ OpenGPT 3.5/4 is a project aimed at providing practical and user-friendly APIs. 
 ## About the Project
 
 This project was made so that everyone can have access to artificial intelligence models for free. Non-profit made by those who love to program!
+
+## Explaining some details
+
+- The artificial intelligence models used and APIs are not ours, it is being made clear so that it does not create confusion in the future.
+
+- We are not responsible for what purposes you use these APIs. We just deliver so you can have fun with this new technology.
+
+- Our purpose is not to harm any of these companies or leak content, we are just providing alternative uses so you can have fun.
+
+- 
