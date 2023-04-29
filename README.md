@@ -22,6 +22,20 @@ This project was made so that everyone can have access to artificial intelligenc
 
 > remembering that all these models are from their respective companies, none of them are ours.
 
+### Included
+
+| Website | Model |
+|---------|-------|
+| [`you.com`](https://you.com/) | `GPT 3.5` + **Internet** |
+
+### Unfinished/Testing
+
+| Website | Model |
+|---------|-------|
+| [`chat.forefront.ai`](https://chat.forefront.ai/) | `GPT 3.5 & GPT 4` + **Internet** |
+
+
+
 ## Setup Project
 
 ### Installation
