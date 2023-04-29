@@ -1,0 +1,8 @@
+package:
+  version: 1.0
+  models:
+    - name: you.com
+      alternatives: ["write", "code"]
+      description: The AI Search Engine You Control
+      url: "https://you.com"
+  
