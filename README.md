@@ -33,6 +33,20 @@ Before starting to use OpenGPT, it is necessary to have the required dependencie
   
 - **Manual**:
   - If you don't have the Makefile installed on your machine, you can just type in your terminal the following: `pip install -r requirements.txt`. Which will also install all the necessary dependencies.
+  
+### Project Architecture
+
+First, you need to download the source code from this repository. After extracting the `.zip` file, you will have a folder called `OpenGPT`. You need to put it in your project, use example architecture:
+
+```
+my_project
+├── OpenGPT
+
+├── your_code
+│   ├── ....
+
+
+```
 
 ## Contribution
 
