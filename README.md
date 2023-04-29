@@ -45,6 +45,11 @@ my_project
 │   ├── ....
 ```
 
+Now, for you to use it, just import: 
+```py 
+import OpenGPT 
+```
+
 ## Contribution
 
 APIs play a crucial role in the development and implementation of AI systems. They provide a means of communication between different components of the AI system, as well as between the AI system and external applications. APIs can also facilitate the integration of AI systems into larger software systems.
