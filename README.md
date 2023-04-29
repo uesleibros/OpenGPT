@@ -41,11 +41,8 @@ First, you need to download the source code from this repository. After extracti
 ```
 my_project
 ├── OpenGPT
-
 ├── your_code
 │   ├── ....
-
-
 ```
 
 ## Contribution
