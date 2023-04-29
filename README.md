@@ -22,6 +22,18 @@ This project was made so that everyone can have access to artificial intelligenc
 
 > remembering that all these models are from their respective companies, none of them are ours.
 
+## Setup Project
+
+### Installation
+
+Before starting to use OpenGPT, it is necessary to have the required dependencies to work. There are 2 ways to make the necessary installations:
+
+- **Makefile**:
+  - If you have `Make` installed on your machine, just run the following command: `make dependencies`. It will download all necessary dependencies.
+  
+- **Manual**:
+  - If you don't have the Makefile installed on your machine, you can just type in your terminal the following: `pip install -r requirements.txt`. Which will also install all the necessary dependencies.
+
 ## Contribution
 
 APIs play a crucial role in the development and implementation of AI systems. They provide a means of communication between different components of the AI system, as well as between the AI system and external applications. APIs can also facilitate the integration of AI systems into larger software systems.
