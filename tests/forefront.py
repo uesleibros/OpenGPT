@@ -2,7 +2,7 @@ from unfinished.forefront.model import Model
 from unfinished.forefront.tools.system.email_creation import Email
 
 email = Email()
-val = email.CreateAccount()
+val = email.CreateAccount() # Create account to use
 
 token = val.token
 session_id = val.sessionID
