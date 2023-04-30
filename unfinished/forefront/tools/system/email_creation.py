@@ -1,8 +1,7 @@
-from typing import Dict
+from typing import Dict, Any
 from pymailtm import MailTm, Message
 from ..typing.response import EmailResponse
 import re
-import json
 import logging
 import fake_useragent
 import tls_client
@@ -15,7 +14,7 @@ class Email:
 	@classmethod
 	def __init__(self: type) -> None:
 		self.__SETUP_LOGGER()
-		self.__session = tls_client.Session(client_identifier="chrome_108")
+		self.__session: tls_client.Session = tls_client.Session(client_identifier="chrome_108")
 
 	@classmethod
 	def __SETUP_LOGGER(self: type) -> None:
@@ -38,8 +37,8 @@ class Email:
 
 	@classmethod
 	def CreateAccount(self: object) -> str:
-		mail_client = MailTm().get_account()
-		mail_address = mail_client.address
+		mail_client: MailTm = MailTm().get_account()
+		mail_address: Any = mail_client.address
 
 		self.__session.headers = {
 			"Origin": "https://accounts.forefront.ai",
