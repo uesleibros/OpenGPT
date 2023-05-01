@@ -4,6 +4,8 @@
 
 This is a more recommended template for getting answers, I don't recommend using it for dialogues, discussions or jokes. Uses GPT-3.5 Turbo with Internet but designed for search engine.
 
+[How to Use](https://github.com/uesleibros/OpenGPT/tree/main/models/you)
+
 ## Unauthorized
 
 As you know, it works best on `localhost`, that is, running the code on your local machine. When hosted on a client (server), Cloudflare detects that we are a robot because of the Headers and the way the request is made. One way to resolve this is by using a Proxy.
