@@ -30,16 +30,17 @@ This project was made so that everyone can have access to artificial intelligenc
 
 | Website | Model |
 |---------|-------|
-| [`you.com`](https://you.com/) | `GPT 3.5` + **Internet** |
-| [`chat.forefront.ai`](https://chat.forefront.ai/) | `GPT 3.5 & GPT 4` + **Internet** |
-| [`cocalc.com`](https://cocalc.com/) | `GPT 3.5` |
+| [`you.com`](https://you.com/) | `GPT 3.5-Turbo` and **Internet** |
+| [`chat.forefront.ai`](https://chat.forefront.ai/) | `GPT 3.5-Turbo`, `GPT-4` and **Internet** |
+| [`cocalc.com`](https://cocalc.com/) | `GPT-3.5` |
+| [`ai.usesless.com`](https://ai.usesless.com/) | `GPT-3.5-Turbo`, `GPT-4` |
 
 ### Unfinished/Testing
 
 | Website | Model |
 |---------|-------|
-| [`italygpt.it`](https://italygpt.it/) | `GPT 3` & `GPT 3.5-Turbo` + `GPT-4` |
-
+| [`italygpt.it`](https://italygpt.it/) | `GPT-3`, `GPT-3.5-Turbo`, `GPT-4` + **Internet** |
+| [`beta.character.ai`](https://beta.character.ai/) | `GANs` |
 
 ## Setup Project
 
