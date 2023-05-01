@@ -27,13 +27,13 @@ This project was made so that everyone can have access to artificial intelligenc
 | Website | Model |
 |---------|-------|
 | [`you.com`](https://you.com/) | `GPT 3.5` + **Internet** |
+| [`chat.forefront.ai`](https://chat.forefront.ai/) | `GPT 3.5 & GPT 4` + **Internet** |
 
 ### Unfinished/Testing
 
 | Website | Model |
 |---------|-------|
-| [`chat.forefront.ai`](https://chat.forefront.ai/) | `GPT 3.5 & GPT 4` + **Internet** |
-
+| [`cocalc.com`](https://cocalc.com/) | `GPT 3.5` |
 
 
 ## Setup Project
