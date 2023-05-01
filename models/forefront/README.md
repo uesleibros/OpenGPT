@@ -24,7 +24,8 @@ To solve this problem, you send the request to the route that generates this new
 
 ```json
 {
-  "jwt": "token" 
+  "object": "token",
+  "jwt": "jwt_token" 
 }
 ``` 
 
@@ -35,3 +36,21 @@ Step 1: Check JWT Token is Valid
 Step 2: Generate new JWT Token 
 Step 3: Get completion response using JWT Token 
 ```
+
+### Algorithm
+
+The algorithm that ForeFront.ai uses is `RS256`. Used a lot for these systems. They are encrypted and use a private key to perform encryption. Each JWT Token is good for something, for example. In cookies, the `__client` is what defines that you are logged into your account, containing some information, usually this format comes like this:
+
+```js
+{
+  "azp": "https://chat.forefront.ai",                       //  Authorized party
+  "exp": 1682912078,                                       //   Expiration time
+  "iat": 1682912018,                                      //    Issued at
+  "iss": "https://clerk.forefront.ai",                   //     Issuer
+  "nbf": 1682912008,                                    //      Not valid before
+  "sid": "sess_XXXXXXXXXXXXXXXXXXXXXXXXXXX",           //       Session ID
+  "sub": "user_XXXXXXXXXXXXXXXXXXXXXXXXXXX"           //        Subject
+}
+```
+
+It's tricky to be able to access and manipulate these values ​​with a well-architected system, so I owe congratulations to ForeFront.ai
