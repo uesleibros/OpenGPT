@@ -1,8 +1,11 @@
 # ForeFront.ai
 
-![ForeFront.ai Logo](https://cdn.storifyme.com/accounts/cashify-in-0561312/assets/f-628193922a4d18f47da82090_webclip-51371682183445132.png?t=1682184113000)
+![ForeFront.ai Logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0F7PGn9gAVFcnlfQK-Vc4KTMbj7DXcRGhuA&usqp=CAU)
 
 This model has access to GPT-3.5 Turbo and GPT-4. Honestly, I consider it the best for use, it is very accurate in the answers and easy to access, apart from that it is unlimited and without problems with the application.
+
+[How to Use](https://github.com/uesleibros/OpenGPT/tree/main/models/forefront/DOC.md)
+
 
 ## JWT
 
