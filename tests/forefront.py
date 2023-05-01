@@ -1,13 +1,14 @@
-from unfinished.forefront.model import Model
-from unfinished.forefront.tools.system.email_creation import Email
+from models.forefront.model import Model
+from models.forefront.tools.system.email_creation import Email
 
 email = Email()
-val = email.CreateAccount() # Create account to use
+res = email.CreateAccount()
 
-token = val.token
-session_id = val.sessionID
+client = res.client
+sessionID = res.sessionID
 
-forefront = Model(token=token, session_id=session_id, model="gpt-4")
-forefront.SetupConversation("Better Minecraft soundtrack's")
+forefront = Model(sessionID=sessionID, client=client, model="gpt-3.5-turbo")
+forefront.SetupConversation("Create a story where the child can get rich in less than 3 days.")
 
-print(forefront.SendConversation())
+for r in forefront.SendConversation():
+	print(r.choices[0].delta.content, end='')
