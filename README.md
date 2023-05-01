@@ -32,12 +32,13 @@ This project was made so that everyone can have access to artificial intelligenc
 |---------|-------|
 | [`you.com`](https://you.com/) | `GPT 3.5` + **Internet** |
 | [`chat.forefront.ai`](https://chat.forefront.ai/) | `GPT 3.5 & GPT 4` + **Internet** |
+| [`cocalc.com`](https://cocalc.com/) | `GPT 3.5` |
 
 ### Unfinished/Testing
 
 | Website | Model |
 |---------|-------|
-| [`cocalc.com`](https://cocalc.com/) | `GPT 3.5` |
+| [`italygpt.it`](https://italygpt.it/) | `GPT 3` & `GPT 3.5-Turbo` + `GPT-4` |
 
 
 ## Setup Project
