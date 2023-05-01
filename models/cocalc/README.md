@@ -4,6 +4,8 @@
 
 CoCalc is a cloud-based collaborative software oriented towards research, teaching, and scientific publishing purposes. It uses the GPT-3.5-Turbo and that's why it was added to the project, besides being easy to use.
 
+[How to Use](https://github.com/uesleibros/OpenGPT/tree/main/models/cocalc/DOC.md)
+
 ## Cookies? Relax.
 
 Many projects ask you to get the page's cookies and use them in a variable. But you don't have to! You just need to generate a `uuid` and put it as `CC_ANA`.
