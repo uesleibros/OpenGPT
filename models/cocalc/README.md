@@ -1,5 +1,7 @@
 # CoCalc
 
+![Logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXg6qfOLc9AMYixqDnvASg1Hpjpq-AYmBDqQ&usqp=CAU)
+
 CoCalc is a cloud-based collaborative software oriented towards research, teaching, and scientific publishing purposes. It uses the GPT-3.5-Turbo and that's why it was added to the project, besides being easy to use.
 
 ## Cookies? Relax.
