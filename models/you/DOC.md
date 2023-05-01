@@ -26,7 +26,6 @@ you.SetupConversation("prompt here")
 ```
 
 > **Attention:** You can pass the history to the artificial intelligence to remember what you said. You can make the memory (`history`) dynamic if you like, adding to the list whenever you return the answer.
-> **Attention:** You can pass the history to the artificial intelligence to remember what you said. You can make the memory (`history`) dynamic if you like, adding to the list whenever you return the answer.
 for example:
 
 ```py
