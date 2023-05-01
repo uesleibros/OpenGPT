@@ -1,6 +1,6 @@
 # You.com
 
-![You.com](https://cdn.you.com/img/THUMBNAIL_002a.png)
+![You.com](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/You.com_Logo.svg/2560px-You.com_Logo.svg.png)
 
 This is a more recommended template for getting answers, I don't recommend using it for dialogues, discussions or jokes. Uses GPT-3.5 Turbo with Internet but designed for search engine.
 
