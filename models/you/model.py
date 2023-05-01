@@ -1,6 +1,3 @@
-# 						By UesleiDev / 2023
-#				 YouChat GPT 3.5 API Wrappper
-
 from typing import List, Optional, Dict, Union
 from .tools.typing.response import ModelResponse
 import sys, re
