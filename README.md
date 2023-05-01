@@ -5,8 +5,9 @@
 OpenGPT 3.5/4 is a project aimed at providing practical and user-friendly APIs. The APIs allow for easy integration with various applications, making it simple for developers to incorporate the natural language processing capabilities of GPT into their projects. The user-friendly design of the APIs ensures that developers can quickly and easily start using the GPT technology, without having to navigate complex systems. OpenGPT 3.5/4 is the ideal solution for developers looking to enhance their applications with advanced natural language processing capabilities.
 
 [<img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" height="10" />&nbsp; Join our Community](discord.gg/W7tnxxA6mG)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/2d/58/4a/2d584ac1-80c9-0ae5-5802-1db149f6a929/AppIcon-2x_U007euniversal-4-0-85-220.png/200x0w.webp" height="10" />&nbsp; Star this project](https://github.com/uesleibros/OpenGPT/stargazers)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[✨&nbsp; Have Funny](https://github.com/uesleibros/OpenGPT)
+
+[<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/2d/58/4a/2d584ac1-80c9-0ae5-5802-1db149f6a929/AppIcon-2x_U007euniversal-4-0-85-220.png/200x0w.webp" height="10" />&nbsp; Star this project](https://github.com/uesleibros/OpenGPT/stargazers)
+
 
 ## About the Project
 
