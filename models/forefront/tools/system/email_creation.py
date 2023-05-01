@@ -13,7 +13,7 @@ class Email:
 	@classmethod
 	def __init__(self: type) -> None:
 		self.__SETUP_LOGGER()
-		self.__session = tls_client.Session(client_identifier="chrome_108")
+		self.__session: tls_client.Session = tls_client.Session(client_identifier="chrome_108")
 
 	@classmethod
 	def __SETUP_LOGGER(self: type) -> None:
@@ -41,12 +41,14 @@ class Email:
 			"Origin": "https://accounts.forefront.ai",
 			"User-Agent": fake_useragent.UserAgent().random
 		}
+
+		self.__logger.debug("Checking URL")
 		
 		output = self.__session.post("https://clerk.forefront.ai/v1/client/sign_ups?_clerk_js_version=4.38.4", data={"email_address": mail_address})
 
 		if not self.__AccountState(str(output.text), "id"):
 			self.__logger.error("Failed to create account :(")
-			sys.exit(1)
+			return "Failed"
 
 		trace_id = output.json()["response"]["id"]
 
@@ -55,7 +57,9 @@ class Email:
 
 		if not self.__AccountState(output.text, "sign_up_attempt"):
 			self.__logger.error("Failed to create account :(")
-			sys.exit(1)
+			return "Failed"
+
+		self.__logger.debug("Verifying account")
 
 		while True:
 			new_message: Message = mail_client.wait_for_message()
@@ -70,5 +74,7 @@ class Email:
 		output = self.__session.get("https://clerk.forefront.ai/v1/client?_clerk_js_version=4.38.4")
 		token: str = output.json()["response"]["sessions"][0]["last_active_token"]["jwt"]
 		sessionID: str = output.json()["response"]["last_active_session_id"]
+
+		self.__logger.debug("Created account!")
 
 		return EmailResponse(**{"sessionID": sessionID, "client": __client})
