@@ -4,7 +4,7 @@
 
 This is a more recommended template for getting answers, I don't recommend using it for dialogues, discussions or jokes. Uses GPT-3.5 Turbo with Internet but designed for search engine.
 
-[How to Use](https://github.com/uesleibros/OpenGPT/tree/main/models/you)
+[How to Use](https://github.com/uesleibros/OpenGPT/tree/main/models/you/DOC.md)
 
 ## Unauthorized
 
