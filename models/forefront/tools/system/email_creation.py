@@ -1,19 +1,17 @@
 from typing import Dict
-from pymailtm import MailTm, Message
+from .tempmail import TempMail
 from ..typing.response import EmailResponse
 import re
 import json
 import logging
 import fake_useragent
 import tls_client
-import string
-import random
 
 class Email:
 	@classmethod
 	def __init__(self: type) -> None:
 		self.__SETUP_LOGGER()
-		self.__session: tls_client.Session = tls_client.Session(client_identifier="chrome_108")
+		self.__session: tls_client.Session = tls_client.Session(client_identifier="chrome_110")
 
 	@classmethod
 	def __SETUP_LOGGER(self: type) -> None:
@@ -34,8 +32,8 @@ class Email:
 
 	@classmethod
 	def CreateAccount(self: object) -> str:
-		mail_client = MailTm().get_account()
-		mail_address = mail_client.address
+		Mail = TempMail()
+		MailAddress = Mail.GetAddress
 
 		self.__session.headers = {
 			"Origin": "https://accounts.forefront.ai",
@@ -44,7 +42,7 @@ class Email:
 
 		self.__logger.debug("Checking URL")
 		
-		output = self.__session.post("https://clerk.forefront.ai/v1/client/sign_ups?_clerk_js_version=4.38.4", data={"email_address": mail_address})
+		output = self.__session.post("https://clerk.forefront.ai/v1/client/sign_ups?_clerk_js_version=4.38.4", data={"email_address": MailAddress})
 
 		if not self.__AccountState(str(output.text), "id"):
 			self.__logger.error("Failed to create account :(")
@@ -62,13 +60,15 @@ class Email:
 		self.__logger.debug("Verifying account")
 
 		while True:
-			new_message: Message = mail_client.wait_for_message()
+			messages: Mail.GetMessages = Mail.GetMessages()
 
-			verification_url = re.findall(r"https:\/\/clerk\.forefront\.ai\/v1\/verify\?token=\w.+", new_message.text)[0]
-			if verification_url:
-				break
+			if len(messages) > 0:
+				message: Dict[str, str] = Mail.GetMessage(messages[0]["_id"])
+				verification_url = re.findall(r"https:\/\/clerk\.forefront\.ai\/v1\/verify\?token=\w.+", message["bodyHtml"])[0]
+				if verification_url:
+					break
 
-		r = self.__session.get(verification_url)
+		r = self.__session.get(verification_url.split("\"")[0])
 		__client: str = r.cookies["__client"]
 
 		output = self.__session.get("https://clerk.forefront.ai/v1/client?_clerk_js_version=4.38.4")

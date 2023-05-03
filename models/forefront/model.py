@@ -1,5 +1,5 @@
 from .tools.typing.response import ForeFrontResponse
-from typing import Optional, Union, Generator, Dict, List
+from typing import Optional, Union, Generator, Dict
 import fake_useragent
 import tls_client
 import requests
@@ -104,25 +104,6 @@ class Model:
 
 	@classmethod
 	def SendConversation(self: object) -> Generator[ForeFrontResponse, None, None]:
-		token: str = ''
-		__HEADERS: Dict[str, str] = {
-			"Authority": "clerk.forefront.ai",
-			"Accept": "*/*",
-			"Cache-Control": "no-cache",
-			"Content-Type": "application/x-www-form-urlencoded",
-			"Origin": "https://chat.forefront.ai",
-			"Pragma": "no-cache",
-			"Cookie": f"__client={self.__CLIENT}",
-			"Sec-Ch-Ua": "\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"",
-			"Sec-Ch-Ua-mobile": "?0",
-			"Sec-Ch-Ua-platform": "\"macOS\"",
-			"Referer": "https://chat.forefront.ai/",
-			"Sec-Fetch-Dest": "empty",
-			"Sec-Fetch-Mode": "cors",
-			"Sec-Fetch-Site": "same-site",
-			"User-Agent": fake_useragent.UserAgent().random
-		}
-
 		self.__UpdateJWTToken()
 		for chunk in self.__session.post("https://streaming.tenant-forefront-default.knative.chi.coreweave.com/chat", 
 			headers=self.__HEADERS, json=self.__JSON, stream=True
