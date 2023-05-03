@@ -13,6 +13,10 @@ OpenGPT 3.5/4 is a project aimed at providing practical and user-friendly APIs. 
 
 This project was made so that everyone can have access to artificial intelligence models for free. Non-profit made by those who love to program!
 
+### Services
+
+- [<img src="https://seeklogo.com/images/O/open-ai-logo-8B9BFEDC26-seeklogo.com.png" height="15" /> Playground](https://gptplayground.uesleidev.repl.co/playground)
+
 ## Explaining some details
 
 - We are currently organizing the project and as such, the source code for one of the AIs API has not been released yet.
