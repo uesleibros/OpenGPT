@@ -22,7 +22,7 @@ Note: The answer is html formatted.
 If you want to keep conversations, when calling the GetAnswer method pass the messages parameter.
 
 ```py
-print(italygpt.SendConversation(prompt="What is the meaning of life?", messages=self.messages))
+print(italygpt.GetAnswer(prompt="What is the meaning of life?", messages=self.messages))
 ```
 Note: the self.messages variable stores the messages for only last conversation. The max messages that can be kept is 5.
 
