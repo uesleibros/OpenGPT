@@ -8,7 +8,7 @@ This folder contains models that are done or require further improvements.
 
 #### <img src="https://pbs.twimg.com/profile_images/1415398873552543744/BrvPGbfQ_400x400.png"  height="15"/> ForeFront.ai
 
-This is the best template for the job, fast and with GPT-4 available for use. With conversation and history chat systems, it is the most advanced.
+This is the best model for the job, fast and with GPT-4 available for use. With conversation and history chat systems, it is the most advanced.
 
 ## Purpose
 
