@@ -7,9 +7,8 @@
     - [Conversation System](#Conversation-System)
       - [Conversation](#Conversation)
         - [Creating Chat](#Creating-Chat)
-	
-	
         - [Managing Chats](#Managing-Chats)
+        
 # How to Use
 
 First you need to import the model and the system to create email, example:
