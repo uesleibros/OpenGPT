@@ -37,7 +37,6 @@ This project was made so that everyone can have access to artificial intelligenc
 |---------|-------|
 | [`you.com`](https://you.com/) | `GPT 3.5-Turbo` and **Internet** |
 | [`chat.forefront.ai`](https://chat.forefront.ai/) | `GPT 3.5-Turbo`, `GPT-4` and **Internet** |
-| [`cocalc.com`](https://cocalc.com/) | `GPT-3.5` |
 | [`ai.usesless.com`](https://ai.usesless.com/) | `GPT-3.5-Turbo`, `GPT-4` |
 | [`italygpt.it`](https://italygpt.it/) | `GPT-3.5-Turbo` |
 

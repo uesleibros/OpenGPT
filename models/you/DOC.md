@@ -50,7 +50,7 @@ from models.you.model import Model
 chat = []
 you = Model()
 
-cocalc.SetupConversation("Create an list with all popular cities of United States.", history=chat)
+you.SetupConversation("Create an list with all popular cities of United States.", history=chat)
 
 res = you.SendConversation()
 
