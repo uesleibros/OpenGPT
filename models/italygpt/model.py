@@ -25,6 +25,20 @@ class Model:
             else:
                 print(f"There was an error getting the response, consider re-initializing the italygpt instance. {e}")
                 return
+        if r.get("error") != None:
+            error = r["error"]
+            if "ip is banned" in error.lower():
+                print("Your ip was banned. Support email is: support@ItalyGPT.it")
+                return
+            elif "proxy not allowed" in error.lower():
+                print("You are using a proxy, italygpt api calls do not allow proxies.")
+                return
+            elif "prompt too long" in error.lower():
+                print("Your prompt is too long (max characters is: 1000)")
+                return
+            else:
+                print(f"There was an error with your request: {error}")
+                return
         self.next_id = r["next_id"]
         self.messages = ast.literal_eval(r["raw_messages"])
         self.answer = r["response"]
