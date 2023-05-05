@@ -5,7 +5,11 @@
 - Using Model
   - [Using ForeFront.AI](#Using-ForeFront.AI)
     - [Conversation System](#Conversation-System)
-
+      - [Conversation](#Conversation)
+        - [Creating Chat](#Creating-Chat)
+	
+	
+        - [Managing Chats](#Managing-Chats)
 # How to Use
 
 First you need to import the model and the system to create email, example:
@@ -156,3 +160,55 @@ If you pass a nonexistent Id, when it is created it automatically changes to a v
 ##### Creating Chat
 
 As you know, it automatically creates a chat if there is no current one, and if there is one it uses this one, so how to create a Chat?
+
+In the `SetupConversation` method that we use to pass the prompt, there is a parameter called `options`, in which you can pass if you want to create a chat in that message. Example:
+
+```py
+prompt: str = "example"
+user_list: List[str] = ["userid1", "userid2"]
+example_id: str = "userid3"
+
+if not example_id in user_list:
+  forefront.SetupConversation(prompt=prompt, options={"create": True, "name": example_id + " Chat"})
+```
+
+As you can see, this `options` property has two keys:
+
+- **create** -> if a chat is going to be created in this prompt;
+
+- **name** -> the name of the chat that will be created.
+
+##### Managing Chats
+
+So far we're just creating the chats, but we don't know what the information is or the methods to manipulate them. For that reason, I present you the `Conversation` sub-class, which gives you the freedom to carry out these manipulations. You use it like this:
+
+```py
+forefront.Conversation.method_here
+```
+
+I will list all the methods and how to use them, follow the list:
+
+- **GetList** `()`
+  - This method returns all chats that were created.
+  ```py
+  print(forefront.Conversation.GetList())
+  ```
+
+- **Rename** `(id[string], name[string])`
+  - This method renames the name of an existing chat, just passing its id and the name you want.
+  ```py
+  forefront.Conversation.Rename(id="id_here", name="new_name_here")
+  ```
+ 
+- **Remove** `(id[string])`
+  - This method remove the specify existing chat.
+  ```py
+  forefront.Conversation.Remove(id="id_here")
+  ```
+  
+- **ClearAll** `()`
+  - This method remove all existing chats.
+  > Depending on the number of channels this can be a little time consuming.
+  ```py
+  forefront.Conversation.ClearAll()
+  ```
