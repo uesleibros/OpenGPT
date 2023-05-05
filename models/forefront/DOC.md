@@ -4,6 +4,7 @@
   - [Without Account](#Without-Account)
 - Using Model
   - [Using ForeFront.AI](#Using-ForeFront.AI)
+    - [Conversation System](#Conversation-System)
 
 # How to Use
 
@@ -118,3 +119,40 @@ forefront.SetupConversation("Create a story where the child can get rich in less
 for r in forefront.SendConversation():
 	print(r.choices[0].delta.content, end='')
 ```
+
+### Conversation System
+
+![Future](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy6dKkIjt1LXljQEYgP3R-g42eLHx4fMIGhg&usqp=CAU)
+
+It's a future of systems, you can talk with AI and his remember what you talk before, that's crazy right? Then, this is implemented and is more easy than you think.
+
+
+
+#### Conversation
+
+For start, i will explain something. The conversation system is automatic, on you talk with AI, the memory is located on thr latest chat.
+
+Let's start with existing chats, if you have the ID of a chat already created, you can pass it in 2 ways.
+
+**Way 1 (Using Model class)**
+
+```py
+forefront = Model(...., conversationID="id_here")
+```
+
+
+
+**Way 2 (Dynamic change)**
+
+```py
+forefront = Model(....)
+forefront.CONVERSATION_ID = "id_here"
+```
+
+> You can change the `CONVERSATION_ID` every time you want.
+
+If you pass a nonexistent Id, when it is created it automatically changes to a valid one, this works for both methods.
+
+##### Creating Chat
+
+As you know, it automatically creates a chat if there is no current one, and if there is one it uses this one, so how to create a Chat?
