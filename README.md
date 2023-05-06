@@ -41,6 +41,7 @@ This project was made so that everyone can have access to artificial intelligenc
 | [`italygpt.it`](https://italygpt.it/) | `GPT-3.5-Turbo` |
 | [`chatgptproxy.me`](https://chatgptproxy.me/) | `GPT-3.5-Turbo` |
 | [`chatllama.baseten.co`](https://chatllama.baseten.co/) | `Alpaca-7b` |
+| [`chatbase.co`](https://chatbase.co/) | `GPT-3.5-Turbo`, `GPT-4` |
 
 ### Unfinished/Testing
 
