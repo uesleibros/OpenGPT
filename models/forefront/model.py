@@ -1,6 +1,8 @@
 from .tools.typing.response import ForeFrontResponse
 from .attributes.conversation import Conversation
+from .tools.system.signature import Encrypt
 from typing import Optional, Union, Generator, Dict, List
+from base64 import b64encode
 import fake_useragent
 import tls_client
 import requests
@@ -17,25 +19,26 @@ class Model:
 		self.Conversation: Conversation = Conversation(model=self)
 		self._session: requests.Session = requests.Session()
 		self._model: str = model
-		self.__NAME: Union[str, None] = None
 		self._API = "https://chat-api.tenant-forefront-default.knative.chi.coreweave.com/api/trpc"
+		self.__NAME: Union[str, None] = None
 		self._WORKSPACEID: str = ''
+		self._USERID: str = "user_"
+		self._CLIENT: str = client
 		self._SESSION_ID: str = sessionID
 		self.CONVERSATION_ID: [Union[str, None]] = conversationID
-		self._CLIENT: str = client
 		self._PERSONA: str = "607e41fe-95be-497e-8e97-010a59b2e2c0"
 		self._JSON: Dict[str, str] = {}
 		self._HEADERS: Dict[str, str] = {
 			"Authority": "streaming.tenant-forefront-default.knative.chi.coreweave.com",
 			"Accept": "*/*",
-			"Accept-Language": "en,fr-FR;q=0.9,fr;q=0.8,es-ES;q=0.7,es;q=0.6,en-US;q=0.5,am;q=0.4,de;q=0.3",
+			"Accept-Language": "en,pt-BR,fr-FR;q=0.9,fr;q=0.8,es-ES;q=0.7,es;q=0.6,en-US;q=0.5,am;q=0.4,de;q=0.3",
 			"Authorization": f"Bearer {self._CLIENT}",
 			"Cache-Control": "no-cache",
+			"Pragma": "no-cache",
 			"Content-Type": "application/json",
 			"Origin": "https://chat.forefront.ai",
-			"Pragma": "no-cache",
 			"Referer": "https://chat.forefront.ai/",
-			"Sec-Ch-Ua": "\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"",
+			"Sec-Ch-Ua": "\"Chromium\";v=\"112\", \"Not:A-Brand\";v=\"99\"",
 			"Sec-Ch-Ua-mobile": "?0",
 			"Sec-Ch-Ua-platform": "\"macOS\"",
 			"Sec-Fetch-Dest": "empty",
@@ -63,6 +66,7 @@ class Model:
 		}
 
 		self._WORKSPACEID = self._GetWorkspaceID()
+		self._USERID = self._GetUserID()
 		self._logger.debug("Connected in Workspace: " + self._WORKSPACEID)
 
 	@classmethod
@@ -90,6 +94,17 @@ class Model:
 				break
 
 		self._HEADERS["Authorization"] = f"Bearer {jwt_token.json()['jwt']}"
+
+	@classmethod
+	def _UpdateXSignature(self: type) -> None:
+		DATA_: str = b64encode((self._USERID + self._PERSONA + self._WORKSPACEID).encode()).decode()
+		self._HEADERS["X-Signature"] = Encrypt(DATA_, self._SESSION_ID)
+
+	@classmethod
+	def _GetUserID(self: type) -> str:
+		DATA_: Dict[str, str] = self._session.post(f"https://clerk.forefront.ai/v1/client/sessions/{self._SESSION_ID}/touch?_clerk_js_version=4.38.4",
+																headers=self._JWT_HEADERS).json()
+		return DATA_["response"]["user"]["id"]
 
 	@classmethod
 	def _GetWorkspaceID(self: type) -> str:
@@ -139,6 +154,8 @@ class Model:
 	@classmethod
 	def SendConversation(self: type) -> Generator[ForeFrontResponse, None, None]:
 		self._UpdateJWTToken()
+		self._UpdateXSignature()
+
 		for chunk in self._session.post("https://streaming.tenant-forefront-default.knative.chi.coreweave.com/chat", 
 			headers=self._HEADERS, json=self._JSON, stream=True
 		).iter_lines():

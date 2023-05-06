@@ -104,7 +104,7 @@ To get the answer you can do the following:
 
 ```py
 for r in forefront.SendConversation():
-	print(r.choices[0].delta.content, end='')
+  print(r.choices[0].delta.content, end='')
 ```
 
 The complete code would look like this:
@@ -120,7 +120,7 @@ forefront = Model(sessionID=sessionID, client=client, model="gpt-3.5-turbo")
 forefront.SetupConversation("Create a story where the child can get rich in less than 3 days.")
 
 for r in forefront.SendConversation():
-	print(r.choices[0].delta.content, end='')
+  print(r.choices[0].delta.content, end='')
 ```
 
 ### Conversation System
