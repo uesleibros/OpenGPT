@@ -39,6 +39,8 @@ This project was made so that everyone can have access to artificial intelligenc
 | [`chat.forefront.ai`](https://chat.forefront.ai/) | `GPT 3.5-Turbo`, `GPT-4` and **Internet** |
 | [`ai.usesless.com`](https://ai.usesless.com/) | `GPT-3.5-Turbo`, `GPT-4` |
 | [`italygpt.it`](https://italygpt.it/) | `GPT-3.5-Turbo` |
+| [`chatgptproxy.me`](https://chatgptproxy.me/) | `GPT-3.5-Turbo` |
+| [`chatllama.baseten.co`](https://chatllama.baseten.co/) | `Alpaca-7b` |
 
 ### Unfinished/Testing
 
