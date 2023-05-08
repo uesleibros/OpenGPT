@@ -5,7 +5,7 @@ description = ""
 authors = []
 license = "GPL-3.0"
 readme = "README.md"
-packages = [{ include = "models" }]
+packages = [{ include = "opengpt" }]
 exclude = ["**/*.txt"]
 
 [tool.poetry.dependencies]
