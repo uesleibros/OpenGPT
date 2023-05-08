@@ -17,7 +17,7 @@ pydantic = "^1.10.7"
 
 [pypi]
 username = "UesleiDev"
-password = ${{ secrets.PYPI_TOKEN }}
+password = "${{ secrets.PYPI_TOKEN }}"
 
 [build-system]
 requires = ["poetry-core"]
