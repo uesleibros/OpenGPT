@@ -1,4 +1,4 @@
-from models.you.model import Model
+from opengpt.you.model import Model
 
 chat = []
 youapi = Model()
