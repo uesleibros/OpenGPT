@@ -3,7 +3,7 @@
 To use this model is very simple, first you need to import it:
 
 ```py
-from models.chatbase.model import Model
+from opengpt.chatbase.model import Model
 ```
 
 After importing, we initialize the class to work with it.
@@ -22,7 +22,7 @@ Note: Available models are gpt-4 and gpt-3.5-turbo. Conversations are kept by de
 Here is how you could make a simple chatbot with ChatBase
 
 ```py
-from models.chatbase.model import Model
+from opengpt.chatbase.model import Model
 
 chatbase = Model()
 
