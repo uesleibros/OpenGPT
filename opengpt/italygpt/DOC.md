@@ -3,7 +3,7 @@
 To use this model is very simple, first you need to import it:
 
 ```py
-from models.italygpt.model import Model
+from opengpt.italygpt.model import Model
 ```
 
 After importing, we initialize the class to work with it.
@@ -29,7 +29,7 @@ Note: the self.messages variable stores the messages for only last conversation.
 Here is how you could make a simple chatbot with ItalyGPT
 
 ```py
-from models.italygpt.model import Model
+from opengpt.italygpt.model import Model
 
 italygpt = Model()
 
