@@ -1,5 +1,5 @@
-from models.forefront.model import Model
-from models.forefront.tools.system.email_creation import Email
+from oepngpt.forefront.model import Model
+from opengpt.forefront.tools.system.email_creation import Email
 
 email = Email()
 res = email.CreateAccount()
