@@ -14,8 +14,8 @@
 First you need to import the model and the system to create email, example:
 
 ```py
-from models.forefront.model import Model
-from models.forefront.tools.system.email_creation import Email
+from opengpt.forefront.model import Model
+from opengpt.forefront.tools.system.email_creation import Email
 ```
 
 After importing let's confirm some things. Firstly, if you already have a ForeFront.ai account, you can use it as follows:
@@ -110,8 +110,8 @@ for r in forefront.SendConversation():
 The complete code would look like this:
 
 ```py
-from models.forefront.model import Model
-from models.forefront.tools.system.email_creation import Email
+from opengpt.forefront.model import Model
+from opengpt.forefront.tools.system.email_creation import Email
 
 client = "MY_CLIENT"
 sessionID = "MY_SESSION"
