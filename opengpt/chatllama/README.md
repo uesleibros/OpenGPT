@@ -2,7 +2,7 @@
 
 Chat LLaMa is a website that provides access to LLaMa models.
 
-[How to Use](https://github.com/uesleibros/OpenGPT/tree/main/models/chatgptproxy/DOC.md)
+[How to Use](https://github.com/uesleibros/OpenGPT/tree/main/opengpt/chatgptproxy/DOC.md)
 
 ## Problems
 

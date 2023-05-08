@@ -4,7 +4,7 @@
 
 This is a Chinese site that uses the OpenAI templates (GPT-3.5 and GPT-4). It is very fast and you can get answers in real time, which facilitates the process.
 
-[How to Use](https://github.com/uesleibros/OpenGPT/tree/main/models/usesless/DOC.md)
+[How to Use](https://github.com/uesleibros/OpenGPT/tree/main/opengpt/usesless/DOC.md)
 
 ## Customization
 

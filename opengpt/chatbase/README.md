@@ -2,7 +2,7 @@
 
 ChatBase is a service offering chatgpt integration for websites for both gpt3.5-turbo and gpt-4.
 
-[How to Use](https://github.com/uesleibros/OpenGPT/tree/main/models/chatbase/DOC.md)
+[How to Use](https://github.com/uesleibros/OpenGPT/tree/main/opengpt/chatbase/DOC.md)
 
 ## Problems
 
