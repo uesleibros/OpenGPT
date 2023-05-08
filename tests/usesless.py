@@ -1,4 +1,4 @@
-from models.usesless.model import Model
+from opengpt.usesless.model import Model
 
 usesless = Model(model="gpt-4")
 
