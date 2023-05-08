@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "opengpt4"
 version = "0.1.0"
-description = ""
+description = " "
 authors = []
 license = "GPL-3.0"
 readme = "README.md"
