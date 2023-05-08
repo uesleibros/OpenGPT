@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "opengpt4"
+version = "0.1.0"
+description = ""
+authors = []
+license = "GPL-3.0"
+readme = "README.md"
+packages = [{ include = "models" }]
+exclude = ["**/*.txt"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "2.29.0"
+tls-client = "^0.2"
+fake-useragent = "^1.1.3"
+pydantic = "^1.10.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
