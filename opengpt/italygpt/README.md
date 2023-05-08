@@ -4,7 +4,7 @@
 
 ItalyGPT is an italian website, giving access to gpt for italians when ChatGPT was banned in Italy and now giving access to gpt3.5-turbo for free and gpt4 cheaper than OpenAI.
 
-[How to Use](https://github.com/uesleibros/OpenGPT/tree/main/models/italygpt/DOC.md)
+[How to Use](https://github.com/uesleibros/OpenGPT/tree/main/opengpt/italygpt/DOC.md)
 
 ## Problems
 

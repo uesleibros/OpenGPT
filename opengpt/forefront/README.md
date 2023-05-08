@@ -4,7 +4,7 @@
 
 This model has access to GPT-3.5 Turbo and GPT-4. Honestly, I consider it the best for use, it is very accurate in the answers and easy to access, apart from that it is unlimited and without problems with the application.
 
-[How to Use](https://github.com/uesleibros/OpenGPT/tree/main/models/forefront/DOC.md)
+[How to Use](https://github.com/uesleibros/OpenGPT/tree/main/opengpt/forefront/DOC.md)
 
 
 ## JWT
