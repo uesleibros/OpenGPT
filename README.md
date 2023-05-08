@@ -53,6 +53,8 @@ This project was made so that everyone can have access to artificial intelligenc
 
 ### Installation
 
+#### Source Code
+
 Before starting to use OpenGPT, it is necessary to have the required dependencies to work. There are 2 ways to make the necessary installations:
 
 - **Makefile**:
@@ -61,7 +63,7 @@ Before starting to use OpenGPT, it is necessary to have the required dependencie
 - **Manual**:
   - If you don't have the Makefile installed on your machine, you can just type in your terminal the following: `pip install -r requirements.txt`. Which will also install all the necessary dependencies.
   
-### Project Architecture
+##### Project Architecture
 
 First, you need to download the source code from this repository. After extracting the `.zip` file, you will have a folder called `OpenGPT`. You need to put it in your project, use example architecture:
 
@@ -75,6 +77,22 @@ my_project
 Now, for you to use it, just import: 
 ```py 
 import OpenGPT 
+```
+
+#### Package
+
+You can install this project as module using pip command.
+
+```shell
+pip install opengpt4
+```
+
+After install, for use it's simple, you can work with something model like this:
+
+```py
+from opengpt.forefront.model import Model
+
+# .....
 ```
 
 ## Contribution
