@@ -15,9 +15,6 @@ tls-client = "^0.2"
 fake-useragent = "^1.1.3"
 pydantic = "^1.10.7"
 
-[pypi]
-username = "UesleiDev"
-password = "${{ secrets.PYPI_TOKEN }}"
 
 [build-system]
 requires = ["poetry-core"]
