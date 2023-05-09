@@ -14,32 +14,24 @@ class Model:
         self.next_id = soup.find("input", {"name": "next_id"})["value"]
 
     def GetAnswer(self, prompt: str, messages: list = []):
-        try:
-            r = requests.get("https://italygpt.it/question", params={"hash": sha256(self.next_id.encode()).hexdigest(), "prompt": prompt, "raw_messages": json.dumps(messages)}).json()
-        except Exception as e:
-            r = requests.get("https://italygpt.it/question", params={"hash": sha256(self.next_id.encode()).hexdigest(), "prompt": prompt, "raw_messages": json.dumps(messages)}).text
-            if "too many requests" in r.lower():
-                # rate limit is 5 requests per 1 minute
-                time.sleep(20)
-                return self.create(prompt, messages)
-            else:
-                print(f"There was an error getting the response, consider re-initializing the italygpt instance. {e}")
-                return
-        if r.get("error") != None:
-            error = r["error"]
-            if "ip is banned" in error.lower():
+        r = requests.get("https://italygpt.it/question", params={"hash": sha256(self.next_id.encode()).hexdigest(), "prompt": prompt, "raw_messages": json.dumps(messages)}, stream=True)
+        full_answer = ""
+        for chunk in r.iter_lines():
+            chunk = chunk.decode("utf-8")
+            if "ip is banned" in chunk.lower():
                 print("Your ip was banned. Support email is: support@ItalyGPT.it")
-                return
-            elif "proxy not allowed" in error.lower():
-                print("You are using a proxy, italygpt api calls do not allow proxies.")
-                return
-            elif "prompt too long" in error.lower():
+                break
+            
+            if "high fraud score" in chunk.lower():
+                print("Your ip has a high fraus score. Support email is: support@ItalyGPT.it")
+            
+            if "prompt too long" in chunk.lower():
                 print("Your prompt is too long (max characters is: 1000)")
-                return
-            else:
-                print(f"There was an error with your request: {error}")
-                return
-        self.next_id = r["next_id"]
-        self.messages = ast.literal_eval(r["raw_messages"])
-        self.answer = r["response"]
-        return self
+            
+            if chunk !="":
+                full_answer += chunk
+                yield chunk
+
+        self.next_id = r.headers["next_id"]
+        self.messages = ast.literal_eval(r.headers["raw_messages"])
+        self.answer = full_answer
