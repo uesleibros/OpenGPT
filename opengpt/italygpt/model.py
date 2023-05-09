@@ -24,10 +24,12 @@ class Model:
             
             if "high fraud score" in chunk.lower():
                 print("Your ip has a high fraus score. Support email is: support@ItalyGPT.it")
-            
+                break
+
             if "prompt too long" in chunk.lower():
                 print("Your prompt is too long (max characters is: 1000)")
-            
+                break
+                
             if chunk !="":
                 full_answer += chunk
                 yield chunk
