@@ -1,4 +1,4 @@
-from oepngpt.forefront.model import Model
+from opengpt.forefront.model import Model
 from opengpt.forefront.tools.system.email_creation import Email
 
 email = Email()
