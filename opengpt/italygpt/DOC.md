@@ -1,40 +1,27 @@
 # How to Use
 
-To use this model is very simple, first you need to import it:
-
+To use this model is very simple.
+To make a ChatBot with ItalyGPT You can:
 ```py
-from opengpt.italygpt.model import Model
-```
+from opengpt.italygpt.model import Model # first, we import it
 
-After importing, we initialize the class to work with it.
-
-```py
-italygpt = Model()
-```
-
-Now we just run the `GetAnswer` function to get the answer.
-
-```py
-print(italygpt.GetAnswer(prompt="What is the meaning of life?").answer)
-```
-Note: The answer is html formatted.
-
-If you want to keep conversations, when calling the GetAnswer method pass the messages parameter.
-
-```py
-print(italygpt.GetAnswer(prompt="What is the meaning of life?", messages=self.messages))
-```
-Note: the self.messages variable stores the messages for only last conversation. The max messages that can be kept is 5.
-
-Here is how you could make a simple chatbot with ItalyGPT
-
-```py
-from opengpt.italygpt.model import Model
-
-italygpt = Model()
+italygpt = Model() # here we initialize the model.
 
 while True:
-    prompt = input("Your prompt: ")
-    italygpt.GetAnswer(prompt=prompt, messages=messages)
-    print(italygpt.answer)
+    prompt = input("Your Prompt: ") # here we get your prompt
+    for chunk in italygpt.GetAnswer(prompt, italygpt.messages): # here we ask the question to the model
+        print(chunk, end='') # here we print the answer
+```
+
+Alternatively, you can also do it in that way:
+
+```py
+from opengpt.italygpt.model import Model # first, we import it
+
+italygpt = Model() # here we initialize the model.
+
+while True:
+    prompt = input("Your Prompt: ") # here we get your prompt
+    italygpt.GetAnswer(prompt, italygpt.messages): # here we ask the question to the model
+    print(italygpt.answer) # here we print the answer
 ```
