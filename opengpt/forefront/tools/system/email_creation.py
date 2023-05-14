@@ -1,5 +1,5 @@
 from typing import Dict
-from libraries.tempmail import TempMail
+from .tempmail import TempMail
 from ..typing.response import EmailResponse
 import re
 import json
