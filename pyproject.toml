@@ -6,7 +6,6 @@ authors = []
 license = "GPL-3.0"
 readme = "README.md"
 packages = [{ include = "opengpt"}, { include = "libraries"}]
-exclude = ["**/*.txt"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
