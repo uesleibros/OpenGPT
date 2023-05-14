@@ -20,8 +20,9 @@ class OpenGPTError(Exception):
 class OpenGPT:
 	@classmethod
 	def __init__(self: type, provider: Text, type: Optional[Text] = "completion", options: Optional[Union[Dict[Text, Text], None]] = None) -> None:
+	
+		self.__DIR: Text = os.getcwd()	
 		self.__LoadModels()
-		self.__DIR: Text = os.getcwd()
 		self.__TYPE: Text = type
 		self.__OPTIONS: Union[Dict[Text, Text], None] = options
 		self.__PROVIDER: Text = provider
