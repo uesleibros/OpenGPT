@@ -6,12 +6,8 @@ authors = []
 license = "GPL-3.0"
 readme = "README.md"
 
-[[tool.poetry.packages]]
-include = "opengpt"
-exclude = ["**/*.txt"]
-
-[[tool.poetry.packages]]
-include = "libraries"
+[tool.poetry.packages]
+include = ["opengpt", "libraries"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
