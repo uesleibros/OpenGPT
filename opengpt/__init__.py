@@ -1,5 +1,5 @@
 from typing import Optional, Union, Dict, List, Text
-from libraries.colorama import init, Fore, Style
+from .libraries.colorama import init, Fore, Style
 import importlib
 import yaml
 import sys

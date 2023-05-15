@@ -1,7 +1,7 @@
 from typing import Dict, Text, Optional, Generator, Any, Tuple
 from .tools.system.id import UniqueID
 from .tools.typing.response import ModelResponse
-from libraries.colorama import init, Fore, Style
+from ....libraries.colorama import init, Fore, Style
 import yaml
 import requests
 import fake_useragent
