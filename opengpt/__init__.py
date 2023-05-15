@@ -4,6 +4,7 @@ import importlib
 import yaml
 import sys
 import inspect
+import os
 
 init()
 
@@ -19,6 +20,8 @@ class OpenGPTError(Exception):
 class OpenGPT:
 	@classmethod
 	def __init__(self: type, provider: Text, type: Optional[Text] = "completion", options: Optional[Union[Dict[Text, Text], None]] = None) -> None:
+	
+		self.__DIR: Text = os.getcwd()	
 		self.__LoadModels()
 		self.__TYPE: Text = type
 		self.__OPTIONS: Union[Dict[Text, Text], None] = options
@@ -55,7 +58,7 @@ class OpenGPT:
 
 	@classmethod
 	def __LoadModels(self: type) -> None:
-		self.__DATA: Dict[Text, Text] = yaml.safe_load(open("opengpt/config.yml").read())
+		self.__DATA: Dict[Text, Text] = yaml.safe_load(open(self.__DIR + "/config.yml").read())
 
 	@classmethod
 	def __Verifications(self: type) -> None:

@@ -83,8 +83,9 @@ import OpenGPT
 You can install this project as module using pip command.
 
 ```shell
-pip install opengpt4
+pip install opengpt4==0.1.1
 ```
+> It's recommend to use 0.1.1 version for now, the latest version is with bugs. If you want to use the latest version just download source code.
 
 After install, for use it's simple, you can work with something model like this:
 
