@@ -23,8 +23,8 @@ class Model:
 	@classmethod
 	def __init__(self: type, style: Optional[Text] = "Hotpot Art 9") -> None:
 		self._SETUP_LOGGER()
+		self.__DIR: Text = os.path.dirname(os.path.abspath(__file__))
 		self.__LoadStyles()
-		self.__DIR: Text = os.getcwd()
 		self.__session: requests.Session = requests.Session()
 		self.__UNIQUE_ID: str = UniqueID(16)
 		self.STYLE: Text = style
@@ -73,7 +73,7 @@ class Model:
 
 	@classmethod
 	def __LoadStyles(self: type) -> None:
-		self.__DATA: Dict[Text, Text] = yaml.safe_load(open(self.__DIR + "/styles.yml").read())
+		self.__DATA: Dict[Text, Text] = yaml.safe_load(open(self.__DIR + "/styles.yml", "r").read())
 
 	@classmethod
 	def __Fields(self: type, *args: Tuple[int, str], **kwargs: Dict[str, Any]) -> Text:

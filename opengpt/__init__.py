@@ -20,17 +20,14 @@ class OpenGPTError(Exception):
 class OpenGPT:
 	@classmethod
 	def __init__(self: type, provider: Text, type: Optional[Text] = "completion", options: Optional[Union[Dict[Text, Text], None]] = None) -> None:
-	
-		self.__DIR: Text = os.getcwd()	
+		self.__DIR: Text = os.path.dirname(os.path.abspath(__file__))
 		self.__LoadModels()
 		self.__TYPE: Text = type
 		self.__OPTIONS: Union[Dict[Text, Text], None] = options
 		self.__PROVIDER: Text = provider
-
 		self.__Verifications()
 		self.__MODULE: module = importlib.import_module(f"opengpt.models.{self.__TYPE}.{self.__PROVIDER}.model")
 		self.__MODEL_CLASS: type = getattr(self.__MODULE, "Model")
-
 		self.__model: type = None
 		self.__InitializeModelClass()
 
@@ -58,7 +55,7 @@ class OpenGPT:
 
 	@classmethod
 	def __LoadModels(self: type) -> None:
-		self.__DATA: Dict[Text, Text] = yaml.safe_load(open(self.__DIR + "/config.yml").read())
+		self.__DATA: Dict[Text, Text] = yaml.safe_load(open(self.__DIR + "/config.yml", "r").read())
 
 	@classmethod
 	def __Verifications(self: type) -> None:
