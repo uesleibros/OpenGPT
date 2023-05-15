@@ -33,7 +33,7 @@ This project was made so that everyone can have access to artificial intelligenc
 
 ### Included
 
-## Completion
+#### Completion
 
 | Website | Model |
 |---------|-------|
@@ -44,20 +44,21 @@ This project was made so that everyone can have access to artificial intelligenc
 | [`chatllama.baseten.co`](https://chatllama.baseten.co/) | `Alpaca-7b` |
 | [`chatbase.co`](https://chatbase.co/) | `GPT-3.5-Turbo`, `GPT-4` |
 
-## Image
+#### Image
+
 | Website | Model |
 |---------|-------|
 | [`hotpot.ai`](https://hotpot.ai/art-generator) | `Stable Diffusion` |
 
 ### Unfinished/Testing
 
-## Completion
+#### Completion
 
 | Website | Model |
 |---------|-------|
 | [`beta.character.ai`](https://beta.character.ai/) | `C1.2 (own model)` |
 
-## Image
+#### Image
 
 | Website | Model |
 |---------|-------|
