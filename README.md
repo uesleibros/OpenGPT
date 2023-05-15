@@ -75,7 +75,7 @@ my_project
 
 Now, for you to use it, just import: 
 ```py 
-import OpenGPT 
+from OpenGPT.opengpt import OpenGPT
 ```
 
 #### Package
@@ -83,14 +83,15 @@ import OpenGPT
 You can install this project as module using pip command.
 
 ```shell
-pip install opengpt4==0.1.1
+pip install opengpt4
 ```
-> It's recommend to use 0.1.1 version for now, the latest version is with bugs. If you want to use the latest version just download source code.
 
 After install, for use it's simple, you can work with something model like this:
 
 ```py
-from opengpt.forefront.model import Model
+from opengpt import OpenGPT
+
+forefront = OpenGPT(provider="forefront", type="completion", options={...})
 
 # .....
 ```
