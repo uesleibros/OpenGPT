@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "opengpt4"
-version = "0.1.6"
+version = "0.1.7"
 description = ""
 authors = []
 license = "GPL-3.0"
 readme = "README.md"
-packages = [{ include = "opengpt"}, { include = "libraries"}]
+packages = [{ include = "opengpt"}]
 
 [tool.poetry.dependencies]
 python = "^3.7"
