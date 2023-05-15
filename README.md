@@ -33,6 +33,8 @@ This project was made so that everyone can have access to artificial intelligenc
 
 ### Included
 
+## Completion
+
 | Website | Model |
 |---------|-------|
 | [`chat.forefront.ai`](https://chat.forefront.ai/) | `GPT 3.5-Turbo`, `GPT-4` and **Internet** |
@@ -42,11 +44,24 @@ This project was made so that everyone can have access to artificial intelligenc
 | [`chatllama.baseten.co`](https://chatllama.baseten.co/) | `Alpaca-7b` |
 | [`chatbase.co`](https://chatbase.co/) | `GPT-3.5-Turbo`, `GPT-4` |
 
+## Image
+| Website | Model |
+|---------|-------|
+| [`hotpot.ai`](https://hotpot.ai/art-generator) | `Stable Diffusion` |
+
 ### Unfinished/Testing
+
+## Completion
 
 | Website | Model |
 |---------|-------|
-| [`beta.character.ai`](https://beta.character.ai/) | `GANs` |
+| [`beta.character.ai`](https://beta.character.ai/) | `C1.2 (own model)` |
+
+## Image
+
+| Website | Model |
+|---------|-------|
+| [`nightcafe`](https://nightcafe.studio) | `Stable Diffusion`, `Dall-E 2` and `Coherent` |
 
 ## Setup Project
 
