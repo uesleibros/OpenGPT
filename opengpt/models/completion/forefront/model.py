@@ -1,7 +1,7 @@
 from .tools.typing.response import ForeFrontResponse
 from .tools.system.signature import Encrypt
 from .attributes.conversation import Conversation
-from libraries.colorama import init, Fore, Style
+from ....libraries.colorama import init, Fore, Style
 from typing import Optional, Union, Generator, Dict, List
 from base64 import b64encode
 import fake_useragent
