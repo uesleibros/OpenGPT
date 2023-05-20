@@ -14,8 +14,8 @@
 First you need to import the model and the system to create email, example:
 
 ```py
-from opengpt.forefront.model import Model
-from opengpt.forefront.tools.system.email_creation import Email
+from opengpt.models.completion.forefront.model import Model
+from opengpt.models.completion.forefront.tools.system.email_creation import Email
 ```
 
 After importing let's confirm some things. Firstly, if you already have a ForeFront.ai account, you can use it as follows:
@@ -76,7 +76,7 @@ Now you will use the `CreateAccount` property.
 res = email.CreateAccount()
 ```
 
-It will take some time to create the account, but after creating it, it will return some values ​​like: `client` and `sessionID`. You can store these values in variables for later use.
+It will take some time to create the account, but after creating it, it will return some values like: `client` and `sessionID`. You can store these values in variables for later use.
 
 ```py
 client = res.client
@@ -110,8 +110,8 @@ for r in forefront.SendConversation():
 The complete code would look like this:
 
 ```py
-from opengpt.forefront.model import Model
-from opengpt.forefront.tools.system.email_creation import Email
+from opengpt.models.completion.forefront.model import Model
+from opengpt.models.completion.forefront.tools.system.email_creation import Email
 
 client = "MY_CLIENT"
 sessionID = "MY_SESSION"

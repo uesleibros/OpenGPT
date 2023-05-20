@@ -3,7 +3,7 @@
 To use this model is very simple, first you need to import it:
 
 ```py
-from opengpt.chatgptproxy.model import Model
+from opengpt.models.completion.chatgptproxy.model import Model
 ```
 
 After importing, we initialize the class to work with it.
@@ -22,7 +22,7 @@ Note: Conversations are kept by default.
 Here is how you could make a simple chatbot with ChatGPTProxy
 
 ```py
-from opengpt.chatgptproxy.model import Model
+from opengpt.models.completion.chatgptproxy.model import Model
 
 chatgptproxy = Model()
 
