@@ -3,7 +3,7 @@
 To use this model is very simple.
 To make a ChatBot with ItalyGPT You can:
 ```py
-from opengpt.italygpt.model import Model # first, we import it
+from opengpt.models.completion.italygpt.model import Model # first, we import it
 
 italygpt = Model() # here we initialize the model.
 
@@ -16,7 +16,7 @@ while True:
 Alternatively, you can also do it in that way:
 
 ```py
-from opengpt.italygpt.model import Model # first, we import it
+from opengpt.models.completion.italygpt.model import Model # first, we import it
 
 italygpt = Model() # here we initialize the model.
 

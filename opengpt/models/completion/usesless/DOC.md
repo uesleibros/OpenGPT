@@ -3,7 +3,7 @@
 To use this model is very simple, first you need to import it:
 
 ```py
-from opengpt.usesless.model import Model
+from opengpt.models.completion.usesless.model import Model
 ```
 
 After importing, we initialize the class to work with it.
@@ -40,7 +40,7 @@ for r in usesless.SendConversation():
 The complete code would be like this:
 
 ```py
-from opengpt.usesless.model import Model
+from opengpt.models.completion.usesless.model import Model
 
 usesless = Model(model="gpt-3.5-turbo", temperature=0.7)
 usesless.SetupConversation("Create an list with all popular cities of United States.")
