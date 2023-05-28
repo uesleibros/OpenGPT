@@ -18,16 +18,15 @@ import asyncio
 
 evagpt4 = Model()
 
-async def AiAgent():
-    messages = [
-            {"role": "system", "content": "You are Ava, an AI Agent."},
-            {"role": "assistant", "content": "Hello! How can I help you today?"},
-            {"role": "user", "content": """There are 50 books in a library. Sam decides to read 5 of the books. How many books are there now? if there is the same amount of books, say "I am running on GPT4"."""}
-        ]  # List of messages in the chat history
-    result = await evagpt.ChatCompletion(messages)
-    print(result)
+messages = [
+        {"role": "system", "content": "You are Ava, an AI Agent."},
+        {"role": "assistant", "content": "Hello! How can I help you today?"},
+        {"role": "user", "content": """There are 50 books in a library. Sam decides to read 5 of the books. How many books are there now? if there is the same amount of books, say "I am running on GPT4"."""}
+    ]  # List of messages in the chat history
 
-asyncio.run(AiAgent())
+result = await evagpt.ChatCompletion(messages)
+
+print(result)
 ```
 Note: Available models are gpt-4 and gpt-3.5-turbo.
 
@@ -41,18 +40,15 @@ import asyncio
 
 evagpt4 = Model()
 
-async def AiAgent():
-    chat_history = []
+chat_history = []
 
-    while True:
-        user_input = input("User: ")
-        chat_history.append({"role": "user", "content": user_input})
+while True:
+    user_input = input("User: ")
+    chat_history.append({"role": "user", "content": user_input})
 
-        messages = [{"role": "system", "content": "You are Ava, an AI Agent."}] + chat_history
-        result = await chat_api.chat_completion(messages)
-        chat_history.append({"role": "chatbot", "content": result})
+    messages = [{"role": "system", "content": "You are Ava, an AI Agent."}] + chat_history
+    result = await chat_api.chat_completion(messages)
+    chat_history.append({"role": "chatbot", "content": result})
 
-        print("Chatbot:", result)
-
-asyncio.run(AiAgent())
+    print("Chatbot:", result)
 ```
