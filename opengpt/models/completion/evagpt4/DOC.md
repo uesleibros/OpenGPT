@@ -1,7 +1,7 @@
 To use this model is very simple, first you need to import it:
 
 ```py
-from opengpt.models.completion.evagpt.model import Model
+from opengpt.models.completion.evagpt4.model import Model
 ```
 
 After importing, we initialize the class to work with it.
@@ -13,7 +13,7 @@ Now we just run the `ChatCompletion` function to get the answer.
 
 ```py
 
-from opengpt.models.completion.evagpt.model import Model
+from opengpt.models.completion.evagpt4.model import Model
 import asyncio
 
 evagpt4 = Model()
@@ -36,7 +36,7 @@ Note: Available models are gpt-4 and gpt-3.5-turbo.
 Here is how you could make a simple chatbot with Eva Agent
 
 ```py
-from opengpt.models.completion.evagpt.model import Model
+from opengpt.models.completion.evagpt4.model import Model
 import asyncio
 
 evagpt4 = Model()
