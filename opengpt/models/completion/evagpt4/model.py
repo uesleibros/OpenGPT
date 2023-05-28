@@ -1,5 +1,4 @@
-import aiohttp
-import asyncio
+import requests
 import json
 
 class Model:
@@ -15,7 +14,7 @@ class Model:
         }
         self.accumulated_content = ""
 
-    async def _process_line(self, line):
+    def _process_line(self, line):
         line_text = line.decode("utf-8").strip()
         if line_text.startswith("data:"):
             data = line_text[len("data:"):]
@@ -32,13 +31,12 @@ class Model:
             except json.JSONDecodeError as e:
                 return
 
-    async def ChatCompletion(self, messages):
+    def ChatCompletion(self, messages):
         self.payload["messages"] = messages
 
-        async with aiohttp.ClientSession() as session:
-            async with session.post(self.url, headers=self.headers, data=json.dumps(self.payload)) as response:
-                async for line in response.content:
-                    await self._process_line(line)
+        with requests.post(self.url, headers=self.headers, data=json.dumps(self.payload), stream=True) as response:
+            for line in response.iter_lines():
+                self._process_line(line)
 
         accumulated_content = self.accumulated_content
         self.accumulated_content = ""
