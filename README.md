@@ -37,6 +37,7 @@ This project was made so that everyone can have access to artificial intelligenc
 
 | Website | Model |
 |---------|-------|
+| [`ava-ai-ef611.web.app`](https://ava-ai-ef611.web.app/) | `GPT 3.5-Turbo`, `GPT-4` and **No account required.**|
 | [`chat.forefront.ai`](https://chat.forefront.ai/) | `GPT 3.5-Turbo`, `GPT-4` and **Internet** |
 | [`ai.usesless.com`](https://ai.usesless.com/) | `GPT-3.5-Turbo`, `GPT-4` |
 | [`italygpt.it`](https://italygpt.it/) | `GPT-3.5-Turbo` |
