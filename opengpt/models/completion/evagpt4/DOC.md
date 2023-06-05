@@ -24,7 +24,7 @@ messages = [
         {"role": "user", "content": """There are 50 books in a library. Sam decides to read 5 of the books. How many books are there now? if there is the same amount of books, say "I am running on GPT4"."""}
     ]  # List of messages in the chat history
 
-result = await evagpt.ChatCompletion(messages)
+result = await evagpt4.ChatCompletion(messages)
 
 print(result)
 ```
@@ -47,7 +47,7 @@ while True:
     chat_history.append({"role": "user", "content": user_input})
 
     messages = [{"role": "system", "content": "You are Ava, an AI Agent."}] + chat_history
-    result = await chat_api.chat_completion(messages)
+    result = await evagpt4.ChatCompletion(messages)
     chat_history.append({"role": "chatbot", "content": result})
 
     print("Chatbot:", result)
